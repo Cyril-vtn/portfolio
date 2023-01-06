@@ -1,0 +1,129 @@
+.home {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center;
+  padding: 0;
+  height: 100vh;
+  min-height: 100vh;
+  margin-left: 290px;
+  background-color: #353353;
+  color: #fff;
+  .profilePicWrapper {
+    width: 180px;
+    height: 180px;
+    border: 2px solid #ff4c60;
+    position: relative;
+    margin: 25px auto;
+    overflow: hidden;
+    border-radius: 50%;
+    .profilePic {
+      margin-bottom: 1.5rem !important;
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  h1 {
+    margin-bottom: 0.5rem !important;
+  }
+  .social {
+    margin-top: 1.5rem !important;
+    list-style: none;
+    display: flex !important;
+    justify-content: center;
+    gap: 20px;
+    height: 50px;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    .icon {
+      height: 70%;
+      width: auto;
+
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #ff4c60;
+      }
+    }
+  }
+  .arrowIconContent {
+    color: #fff;
+    cursor: default;
+
+    .arrowIcon {
+      position: relative;
+      height: 30px;
+      top: 100px;
+      animation: bottomMoove 1.8s ease-in-out infinite;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #ff4c60;
+      }
+    }
+  }
+
+  button {
+    margin-top: 1.5rem !important;
+    color: #fff !important;
+    background: #ff4c60;
+    border: none;
+    border-radius: 30px;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    overflow: hidden;
+    line-height: 1;
+    box-shadow: 0 0 1px transparent;
+    padding: 15px 32px;
+    cursor: pointer;
+    .contactText {
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      color: #fff;
+    }
+    &:hover {
+      .contactText {
+        color: #353353;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home {
+    margin-left: 0;
+    justify-content: start !important;
+    padding-top: 100px;
+    .arrowIconContent {
+      .arrowIcon {
+        bottom: 80px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    justify-content: start !important;
+    padding-top: 10px;
+  }
+}
+
+@keyframes bottomMoove {
+  0% {
+    top: 100px;
+  }
+  50% {
+    top: 108px;
+  }
+  100% {
+    top: 100px;
+  }
+}
