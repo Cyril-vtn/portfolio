@@ -34,13 +34,13 @@ const Sidebars = () => {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#projets">
                 <LayersIcon className="icon" />
                 Projets
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#contact">
                 <ChatIcon className="icon" /> Contact
               </a>
             </li>

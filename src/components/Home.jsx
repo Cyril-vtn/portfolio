@@ -29,7 +29,7 @@ const Home = () => {
       </p>
       <div className="social">
         <a href="https://github.com/Cyril-vtn" target="blank">
-          <FontAwesomeIcon icon={faGithub} className="icon" to="" />
+          <FontAwesomeIcon icon={faGithub} className="icon" />
         </a>
         <a
           href="https://www.linkedin.com/in/cyril-votion-8b1080167/"

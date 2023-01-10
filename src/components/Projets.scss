@@ -4,8 +4,63 @@
   width: 100%;
   .content {
     margin: auto;
-    max-width: 1080px;
+    max-width: 1100px;
     padding-right: 15px;
     padding-left: 15px;
+
+    .section-title {
+      font-size: 36px;
+      margin: 0 0 0 14px;
+      position: relative;
+      color: #353353;
+    }
+    .space[data-height="60"] {
+      height: 60px;
+      clear: both;
+    }
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .projet {
+    .content {
+      .row {
+        margin: auto;
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .projet {
+    .content {
+      .row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .projet {
+    .content {
+      .row {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        margin: 0;
+        width: 100%;
+      }
+    }
   }
 }

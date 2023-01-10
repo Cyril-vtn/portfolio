@@ -30,3 +30,16 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+
+html::-webkit-scrollbar {
+  width: 5px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #353353;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(223, 223, 223);
+  border-radius: 25px;
+}

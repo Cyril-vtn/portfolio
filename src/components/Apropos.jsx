@@ -8,6 +8,7 @@ import {
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import resume from "../assets/resume.pdf";
 
 const Apropos = () => {
   return (
@@ -25,7 +26,9 @@ const Apropos = () => {
                   et React.
                 </p>
                 <div className="btn">
-                  <a href="">Télécharger CV</a>
+                  <a href="" download={resume}>
+                    Télécharger CV
+                  </a>
                 </div>
               </div>
               <div className="skills">

@@ -1,5 +1,5 @@
-import "./App.css";
 import Apropos from "./components/Apropos";
+import Contact from "./components/Contact";
 import Container from "./components/Container";
 import Experiences from "./components/Experiences";
 import Home from "./components/Home";
@@ -21,6 +21,7 @@ function App() {
         <Apropos />
         <Experiences />
         <Projets />
+        <Contact />
       </Container>
     </div>
   );
