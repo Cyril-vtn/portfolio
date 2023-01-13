@@ -4,18 +4,32 @@ import copy from "copy-to-clipboard";
 import "./Contact.scss";
 
 const Contact = () => {
+  // Form handling state
   const form = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  // state for text copied
   const [copyText, setCopyText] = useState("votion.cyril@gmail.com");
   const [copiedText, setCopiedText] = useState(false);
 
+  // handling form sending
+  const [emailSend, setEmailSend] = useState(false);
+
+  // Error state
+  const [error, setError] = useState();
+  const [alertMessage, setAlertMessage] = useState("");
+
+  // Connecting to emailjs account and sending form
   const sendEmail = (e) => {
     e.preventDefault();
-
+    if (!name || !email || !subject || !message) {
+      return;
+    }
     emailjs
+
       .sendForm(
         "service_esp9fda",
         "template_pljnkdy",
@@ -24,21 +38,32 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setEmailSend(true);
+          setAlertMessage("Email envoyé");
+          setTimeout(() => {
+            setEmailSend(false);
+          }, 2000);
           setName("");
           setMessage("");
           setEmail("");
           setSubject("");
         },
-        (error) => {
-          console.log(error.text);
+        (e) => {
+          setEmailSend(true);
+          setError(e.message);
+          setAlertMessage(error);
+          setTimeout(() => {
+            setEmailSend(false);
+          }, 2000);
         }
       );
   };
 
+  // text copy handler
   const copyToClipboard = () => {
     copy(copyText);
     setCopiedText(true);
+    setAlertMessage("Texte copié !");
     setTimeout(() => {
       setCopiedText(false);
     }, 2000);
@@ -49,16 +74,16 @@ const Contact = () => {
         <h2 className="section-title ">Me contacter</h2>
         <div className="space" data-height="60"></div>
         <div className="text-content">
-          {/* <p className="hiddenText" id="textEmail">
-            votion.cyril@gmail.com
-          </p> */}
           <p className="text-formulaire">
             Pas fan de formulaire... Voici mon
             <span onClick={copyToClipboard}> adresse mail.</span>
             <br />
-            {copiedText ? <p style={{ color: "red" }}>Copier !</p> : null}
+            {/* Setup alert when user click on text */}
+            {copiedText ? <p className="copy-text">{alertMessage}</p> : null}
           </p>
         </div>
+
+        {/* FORM */}
         <div className="row">
           <div className="contact-form-content">
             <form
@@ -75,9 +100,10 @@ const Contact = () => {
                       className="form-control"
                       name="name"
                       id="InputName"
-                      placeholder="Votre prénom"
+                      placeholder="Votre prénom *"
                       onChange={(e) => setName(e.target.value)}
                       value={name}
+                      required="true"
                     />
                   </div>
                 </div>
@@ -85,12 +111,13 @@ const Contact = () => {
                   <div className="form-group">
                     <input
                       type="email"
-                      className="form-control"
+                      className="form-control "
                       name="email"
                       id="InputEmail"
-                      placeholder="Votre adresse mail"
+                      placeholder="Votre adresse mail *"
                       onChange={(e) => setEmail(e.target.value)}
                       value={email}
+                      required="true"
                     />
                   </div>
                 </div>
@@ -101,9 +128,10 @@ const Contact = () => {
                       className="form-control"
                       name="subject"
                       id="InputSubject"
-                      placeholder="Sujet"
+                      placeholder="Sujet *"
                       onChange={(e) => setSubject(e.target.value)}
                       value={subject}
+                      required="true"
                     />
                   </div>
                 </div>
@@ -114,7 +142,7 @@ const Contact = () => {
                       rows="5"
                       name="message"
                       id="InputMessage"
-                      placeholder="Message"
+                      placeholder="Message *"
                       onChange={(e) => setMessage(e.target.value)}
                       value={message}
                       style={{
@@ -122,6 +150,7 @@ const Contact = () => {
                         overflow: "auto",
                         resize: "vertical",
                       }}
+                      required="true"
                     />
                   </div>
                 </div>
@@ -129,6 +158,7 @@ const Contact = () => {
               <button type="submit" name="submit" id="submit" className="btn">
                 Envoyer un message
               </button>
+              {emailSend ? <p className="copy-text">{alertMessage}</p> : null}
             </form>
           </div>
         </div>
