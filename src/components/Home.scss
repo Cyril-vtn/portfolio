@@ -82,15 +82,13 @@
     box-shadow: 0 0 1px transparent;
     padding: 15px 32px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
     .contactText {
-      transition: all 0.3s ease-in-out;
       text-decoration: none;
       color: #fff;
     }
     &:hover {
-      .contactText {
-        color: #353353;
-      }
+      color: #353353 !important;
     }
   }
 }

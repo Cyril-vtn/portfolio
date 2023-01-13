@@ -21,14 +21,11 @@ const Apropos = () => {
               <div className="description">
                 <p>
                   Cyril Votion, jeune développeur web Front-end ! Je crée des
-                  sites web responsive et user-friendly en utilisant Javascript
-                  et React.
+                  sites web user-friendly en utilisant React.
                 </p>
-                <div className="btn">
-                  <a href="resume.pdf" download="resume.pdf">
-                    Télécharger CV
-                  </a>
-                </div>
+                <a href="resume.pdf" download="resume.pdf">
+                  <button className="btn">Télécharger CV</button>
+                </a>
               </div>
               <div className="skills">
                 <div className="icons">
@@ -63,8 +60,10 @@ const Apropos = () => {
                     Envie de voir tous mes <span>projets</span> réalisés
                   </div>
 
-                  <div className="btn">
-                    <a href="#projets">Clique ici</a>
+                  <div>
+                    <a href="#projets">
+                      <button className="btn">Clique ici</button>
+                    </a>
                   </div>
                 </div>
               </div>

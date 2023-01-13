@@ -37,15 +37,15 @@ const Home = () => {
         >
           <FontAwesomeIcon icon={faLinkedin} className="icon" />
         </a>
-        <a href="mailto:cyril.votion@gmail.com">
+        <a href="mailto:votion.cyril@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} className="icon" />
         </a>
       </div>
-      <button>
-        <a href="#contact" className="contactText">
-          Me contacter
-        </a>
-      </button>
+
+      <a href="#contact">
+        <button className="contactText">Me contacter </button>
+      </a>
+
       <div>
         <a href="#apropos" className="arrowIconContent">
           <FontAwesomeIcon icon={faAngleDoubleDown} className="arrowIcon" />

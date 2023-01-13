@@ -82,7 +82,11 @@ const Experiences = () => {
                   <span className="time">
                     2014 - 2015 | Lycée Pierre-Bayle - Sedan 08200
                   </span>
-                  <p>Lycée Pierre-Bayle - Sedan 08200</p>
+                  <p>
+                    BAC STMG (SCIENCES ET TECHNOLOGIES DU MANAGEMENT ET DE LA
+                    GESTION), apprentissage fonctionnement des organisations,
+                    les relations au travail, le marketing
+                  </p>
                 </div>
               </div>
               <span className="line"></span>

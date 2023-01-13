@@ -12,7 +12,6 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   // state for text copied
-  const [copyText, setCopyText] = useState("votion.cyril@gmail.com");
   const [copiedText, setCopiedText] = useState(false);
 
   // handling form sending
@@ -59,15 +58,6 @@ const Contact = () => {
       );
   };
 
-  // text copy handler
-  const copyToClipboard = () => {
-    copy(copyText);
-    setCopiedText(true);
-    setAlertMessage("Texte copié !");
-    setTimeout(() => {
-      setCopiedText(false);
-    }, 2000);
-  };
   return (
     <section className="contact" id="contact">
       <div className="content">
@@ -76,7 +66,9 @@ const Contact = () => {
         <div className="text-content">
           <p className="text-formulaire">
             Pas fan de formulaire... Voici mon
-            <span onClick={copyToClipboard}> adresse mail.</span>
+            <span>
+              <a href="mailto:votion.cyril@gmail.com"> adresse mail.</a>
+            </span>
             <br />
             {/* Setup alert when user click on text */}
             {copiedText ? <p className="copy-text">{alertMessage}</p> : null}
