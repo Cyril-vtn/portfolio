@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import copy from "copy-to-clipboard";
 import "./Contact.scss";
 
 const Contact = () => {
@@ -27,6 +26,7 @@ const Contact = () => {
     if (!name || !email || !subject || !message) {
       return;
     }
+
     emailjs
 
       .sendForm(

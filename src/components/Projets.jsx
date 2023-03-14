@@ -10,6 +10,7 @@ import githubSearch from "../assets/github-search.png";
 import pigGame from "../assets/pig-game.png";
 import portfolio from "../assets/portfolio.png";
 import underConstruction from "../assets/under-construction.png";
+import sawatdee from "../assets/sawatdee2.jpg";
 
 const Projets = () => {
   return (
@@ -19,16 +20,17 @@ const Projets = () => {
         <div className="space" data-height="60"></div>
         <div className="row">
           <Projet
-            image={underConstruction}
+            image={sawatdee}
             title="Sawatdee Apprendre le Thai ! "
-            language="En cours de création"
+            language="React / Firebase / MaterialUI"
+            githubLink="https://github.com/Cyril-vtn/Sawatdee_Learn_Thai"
+            liveLink="https://brilliant-croissant-799b85.netlify.app/"
           />
           <Projet
             image={portfolio}
             title="Portfolio"
             language="React"
             githubLink="https://github.com/Cyril-vtn/portfolio"
-            liveLink="#"
           />
           <Projet
             image={projetReactAdmin}

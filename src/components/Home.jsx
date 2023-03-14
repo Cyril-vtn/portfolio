@@ -20,7 +20,8 @@ const Home = () => {
       </h1>
       <p>
         <ReactTypingEffect
-          text={["Dévelopeur Front-End", "Aim coach"]}
+          // "Aim coach"
+          text={["Dévelopeur Front-End", "Compétiteur", "Créatif", "Autonome"]}
           typingDelay="1000"
           speed="80"
           eraseDelay="1500"
