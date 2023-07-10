@@ -8,9 +8,11 @@ import adviceGenerator from "../assets/advice-generator.png";
 import valorantClicker from "../assets/valorant-clicker.png";
 import githubSearch from "../assets/github-search.png";
 import pigGame from "../assets/pig-game.png";
+import amazonClone from "../assets/amazonClone.png";
 import portfolio from "../assets/portfolio.png";
 import underConstruction from "../assets/under-construction.png";
 import sawatdee from "../assets/sawatdee2.jpg";
+import SocialDashboard from "../assets/SocialDashboard.png";
 
 const Projets = () => {
   return (
@@ -19,6 +21,20 @@ const Projets = () => {
         <h2 className="section-title ">Projets récents</h2>
         <div className="space" data-height="60"></div>
         <div className="row">
+          <Projet
+            image={amazonClone}
+            title="Amazon Clone"
+            language="NextJS / Tailwind / Stripe / Redux"
+            githubLink="https://github.com/Cyril-vtn/Next_Amazon_clone"
+            liveLink="https://next-amazon-stripe-8o1n.vercel.app/"
+          />
+          <Projet
+            image={SocialDashboard}
+            title="Social Dashboard"
+            language="HTML / SCSS / JS"
+            githubLink="https://github.com/Cyril-vtn/social-media-dashboard"
+            liveLink="https://lighthearted-kulfi-abde1d.netlify.app/"
+          />
           <Projet
             image={sawatdee}
             title="Sawatdee Apprendre le Thai ! "

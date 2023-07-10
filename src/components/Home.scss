@@ -15,12 +15,15 @@
     height: 180px;
     border: 2px solid #ff4c60;
     position: relative;
+
     margin: 25px auto;
     overflow: hidden;
     border-radius: 50%;
     .profilePic {
       margin-bottom: 1.5rem !important;
       position: relative;
+      top: -10px;
+
       width: 100%;
       height: auto;
     }

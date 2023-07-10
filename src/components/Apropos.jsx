@@ -20,8 +20,13 @@ const Apropos = () => {
             <div className="row">
               <div className="description">
                 <p>
-                  Cyril Votion, jeune développeur web Front-end ! Je crée des
-                  sites web user-friendly en utilisant React.
+                  Développeur Front-end junior passionné et dévoué. Créatif et
+                  soucieux de l'expérience utilisateur, je souhaite contribuer à
+                  la création de sites web innovants et réactifs grace aux
+                  technologies comme React ou NextJS. À la recherche
+                  d'opportunités d'alternance pour continuer à développer mes
+                  compétences dans ce domaine qui me passionne depuis maintenant
+                  plusieurs années.
                 </p>
                 <a href="resume.pdf" download="resume.pdf">
                   <button className="btn">Télécharger CV</button>

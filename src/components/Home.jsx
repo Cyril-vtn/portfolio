@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.scss";
-import profilePic from "../assets/profilePicBig.png";
+import profilePic from "../assets/ProfilePicture.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
