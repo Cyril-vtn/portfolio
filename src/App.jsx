@@ -1,16 +1,10 @@
-import Apropos from "./components/Apropos";
-import Contact from "./components/Contact";
+import About from "./components/sections/About";
+import Contact from "./components/sections/Contact";
 import Container from "./components/Container";
-import Experiences from "./components/Experiences";
-import Home from "./components/Home";
-import Projets from "./components/Projets";
+import Experiences from "./components/sections/Experiences";
+import Home from "./components/sections/Home";
+import Projets from "./components/sections/Projets";
 import Sidebar from "./components/Sidebar";
-// site utilisé !
-// https://preview.themeforest.net/item/bolby-react-personal-portfolio-resume-template/full_screen_preview/28928924
-
-// ajouter les projets en liste, et faire le formulaires en utilisant --> https://www.emailjs.com/
-
-// Faire un nouvelle photo si possible.
 
 function App() {
   return (
@@ -18,7 +12,7 @@ function App() {
       <Sidebar />
       <Home />
       <Container>
-        <Apropos />
+        <About />
         <Experiences />
         <Projets />
         <Contact />

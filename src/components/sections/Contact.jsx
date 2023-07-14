@@ -95,7 +95,7 @@ const Contact = () => {
                       placeholder="Votre prénom *"
                       onChange={(e) => setName(e.target.value)}
                       value={name}
-                      required="true"
+                      required
                     />
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                       placeholder="Votre adresse mail *"
                       onChange={(e) => setEmail(e.target.value)}
                       value={email}
-                      required="true"
+                      required
                     />
                   </div>
                 </div>
@@ -123,7 +123,7 @@ const Contact = () => {
                       placeholder="Sujet *"
                       onChange={(e) => setSubject(e.target.value)}
                       value={subject}
-                      required="true"
+                      required
                     />
                   </div>
                 </div>
@@ -142,7 +142,7 @@ const Contact = () => {
                         overflow: "auto",
                         resize: "vertical",
                       }}
-                      required="true"
+                      required
                     />
                   </div>
                 </div>

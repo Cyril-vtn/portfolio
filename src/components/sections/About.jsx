@@ -1,5 +1,5 @@
 import React from "react";
-import "./Apropos.scss";
+import "./About.scss";
 import {
   faHtml5,
   faCss3Alt,
@@ -9,6 +9,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+/**
+ * Render the Apropos section.
+ * @returns {JSX.Element} The Apropos section component.
+ */
 const Apropos = () => {
   return (
     <section className="Apropos" id="apropos">

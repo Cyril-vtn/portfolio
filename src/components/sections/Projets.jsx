@@ -1,18 +1,18 @@
 import React from "react";
 import "./Projets.scss";
-import Projet from "./Projet.jsx";
+import Projet from "../Projet.jsx";
 
 //Images for background
-import projetReactAdmin from "../assets/projet-react-admin.png";
-import adviceGenerator from "../assets/advice-generator.png";
-import valorantClicker from "../assets/valorant-clicker.png";
-import githubSearch from "../assets/github-search.png";
-import pigGame from "../assets/pig-game.png";
-import amazonClone from "../assets/amazonClone.png";
-import portfolio from "../assets/portfolio.png";
-import underConstruction from "../assets/under-construction.png";
-import sawatdee from "../assets/sawatdee2.jpg";
-import SocialDashboard from "../assets/SocialDashboard.png";
+import projetReactAdmin from "../../assets/projet-react-admin.png";
+import adviceGenerator from "../../assets/advice-generator.png";
+import valorantClicker from "../../assets/valorant-clicker.png";
+import githubSearch from "../../assets/github-search.png";
+import pigGame from "../../assets/pig-game.png";
+import amazonClone from "../../assets/amazonClone.png";
+import portfolio from "../../assets/portfolio.png";
+import underConstruction from "../../assets/under-construction.png";
+import sawatdee from "../../assets/sawatdee2.jpg";
+import SocialDashboard from "../../assets/SocialDashboard.png";
 
 const Projets = () => {
   return (
