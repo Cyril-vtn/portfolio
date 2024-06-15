@@ -34,6 +34,57 @@ export const ScrollSection = () => {
     };
   }, []);
 
+  const Card = ({ title, description }) => {
+    const videoRef = useRef(null); // Ref pour l'élément vidéo
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            videoRef.current.play(); // Joue la vidéo quand elle est visible
+          } else {
+            videoRef.current.pause(); // Met la vidéo en pause quand elle n'est plus visible
+          }
+        });
+      },
+      { threshold: 0.5 } // Se déclenche quand 50% de l'élément est visible
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+    return (
+      <div className="w-screen flex justify-center items-center mt-[100px]">
+        <div
+          ref={contentRef}
+          className="flex flex-col items-center w-auto h-3/4 bg-lowContrast rounded-3xl relative aspect-video shadow-soft"
+        >
+          <div className="flex justify-center items-center h-full w-full">
+            <div className="w-full h-full flex flex-col justify-center items-center p-2 ">
+              <video
+                ref={videoRef}
+                autoPlay
+                loop
+                muted
+                className="w-full h-full object-cover relative rounded-3xl"
+              >
+                <source src="/video/sawatdee_thai_demo.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section className="overflow-hidden">
       <div ref={triggerRef}>
@@ -43,19 +94,11 @@ export const ScrollSection = () => {
           ref={sectionref}
         >
           {Array.from({ length: 5 }, (_, index) => (
-            <div
-              className="w-screen flex justify-center items-center mt-[100px]"
+            <Card
               key={index}
-            >
-              <div
-                ref={contentRef}
-                className="flex flex-col items-center w-auto h-3/4 bg-lowContrast rounded-3xl relative aspect-video shadow-soft"
-              >
-                <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
-                  {/* Votre contenu ici */}
-                </div>
-              </div>
-            </div>
+              title="Card Title"
+              description="Card Description"
+            />
           ))}
         </div>
       </div>
