@@ -25,6 +25,7 @@ const config: Config = {
       },
       boxShadow: {
         soft: 'rgba(0, 0, 0, 0.2) 0px 7px 15px',
+        hard: "box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;"
       },
       colors: {
         primary1: "rgb(255, 234, 231)",
