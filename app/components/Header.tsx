@@ -42,7 +42,7 @@ export const Header = () => {
                 Cyril.
               </a>
             </div>
-            <nav className="hidden md:flex space-x-2 font-marlin-medium text-brandOffwhite tracking-tight text-sm">
+            <nav className="hidden md:flex gap-3 font-marlin-medium text-brandOffwhite tracking-tight text-sm">
               <NavigationButton text="Projets" href="/" />
               <NavigationButton text="A propos" href="/about" />
               <NavigationButton text="Contact" href="/contact" />
