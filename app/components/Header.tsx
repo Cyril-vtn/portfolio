@@ -42,13 +42,13 @@ export const Header = () => {
                 Cyril.
               </a>
             </div>
-            <nav className="hidden md:flex gap-3 font-marlin-medium text-brandOffwhite tracking-tight text-sm">
+            <nav className="hidden md:flex gap-3 font-marlin-medium text-brandOffwhite tracking-wide text-sm">
               <NavigationButton text="Projets" href="/" />
               <NavigationButton text="A propos" href="/about" />
               <NavigationButton text="Contact" href="/contact" />
             </nav>
           </div>
-          <a href="https://github.com/Cyril-vtn" className=" hidden md:block">
+          <a href="https://github.com/Cyril-vtn" className=" hidden md:block" target="_blank">
             <Button text="Github" icon={<FaGithub size={18} />} />
           </a>
         </div>
