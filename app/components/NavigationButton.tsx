@@ -21,7 +21,7 @@ export const NavigationButton = ({
           : "hover:text-brandOffwhite hover:shadow-soft hover:scale-105 hover:bg-opacity-50 hover:bg-brandDeepBlue "
       }`}
     >
-      <span>{text}</span>
+      {text}
     </Link>
   );
 };
