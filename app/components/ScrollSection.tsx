@@ -65,16 +65,17 @@ export const ScrollSection = () => {
       <div className="w-screen flex justify-center items-center mt-[100px]">
         <div
           ref={contentRef}
-          className="flex flex-col items-center w-auto h-3/4 bg-lowContrast rounded-3xl relative aspect-video shadow-soft"
+          className="flex flex-col items-center w-auto h-3/4 bg-lowContrast rounded-2xl relative aspect-video shadow-soft"
         >
           <div className="flex justify-center items-center h-full w-full">
-            <div className="w-full h-full flex flex-col justify-center items-center p-2 ">
+            <div className="w-full h-full flex flex-col justify-center items-center p-2 rounded-2xl">
               <video
                 ref={videoRef}
                 autoPlay
                 loop
                 muted
-                className="w-full h-full object-cover relative rounded-3xl"
+                poster="/sawatdee_thai_poster.png"
+                className="w-full h-full object-cover relative rounded-xl"
               >
                 <source src="/video/sawatdee_thai_demo.mp4" type="video/mp4" />
               </video>
