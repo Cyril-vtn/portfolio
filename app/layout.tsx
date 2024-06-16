@@ -12,8 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body>{children}</body>
+    <html lang="fr" className="scrollbar-hide">
+      <body className="scrollbar-hide">{children}</body>
     </html>
   );
 }
