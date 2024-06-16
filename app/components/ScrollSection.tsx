@@ -36,42 +36,27 @@ export const ScrollSection = () => {
 
   const Card = ({ title, description }) => {
     const videoRef = useRef(null); // Ref pour l'élément vidéo
+    const videoContainerRef = useRef(null); // Ref pour le container de la vidéo
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            videoRef.current.play(); // Joue la vidéo quand elle est visible
-          } else {
-            videoRef.current.pause(); // Met la vidéo en pause quand elle n'est plus visible
-          }
-        });
-      },
-      { threshold: 0.5 } // Se déclenche quand 50% de l'élément est visible
-    );
-
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-
-    return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
-      }
-    };
-  }, []);
+    useEffect(() => {
+      // Quand je met ma souris sur le container, je veux que la vidéo joue
+      videoContainerRef.current.addEventListener("mouseenter", () => {
+        videoRef.current.play();
+      });
+      videoContainerRef.current.addEventListener("mouseleave", () => {
+        videoRef.current.pause();
+      });
+    }, []);
     return (
       <div className="w-screen flex justify-center items-center mt-[100px]">
         <div
           ref={contentRef}
           className="flex flex-col items-center w-auto h-3/4 bg-lowContrast rounded-2xl relative aspect-video shadow-soft"
         >
-          <div className="flex justify-center items-center h-full w-full">
-            <div className="w-full h-full flex flex-col justify-center items-center p-2 rounded-2xl">
+          <div className="relative flex justify-center items-center h-full w-full">
+            <div ref={videoContainerRef} className="w-full h-full flex flex-col justify-center items-center p-2 rounded-2xl">
               <video
                 ref={videoRef}
-                autoPlay
                 loop
                 muted
                 poster="/sawatdee_thai_poster.png"
