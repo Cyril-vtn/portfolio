@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Header } from "./components/Header";
 
 
 export const metadata: Metadata = {
@@ -13,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="scrollbar-hide">
-      <body className="scrollbar-hide">{children}</body>
+      <body className="scrollbar-hide">
+      <Header />
+
+        {children}
+        </body>
     </html>
   );
 }
