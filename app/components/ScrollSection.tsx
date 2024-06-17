@@ -129,7 +129,7 @@ export const ScrollSection = () => {
               </button>
               <div
                 className={`absolute right-0 w-1/4 h-full rounded-r-xl z-50 p-4 transition-all duration-300 ease-in-out ${
-                  sidebarOpen ? "right-0" : "-right-[25%]"
+                  sidebarOpen ? "right-0" : "-right-1/4"
                 }`}
               >
                 {/* SIDEBAR */}
