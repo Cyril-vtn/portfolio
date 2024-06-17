@@ -132,7 +132,7 @@ export const ScrollSection = () => {
                 id="sidebar"
                 ref={sidebarRef}
                 className={`absolute z-50 m-4 top-0 flex flex-col h-auto w-1/4 gap-4 bg-brandOffwhite bg-noise-bg rounded-lg shadow-hard py-3 px-5 overflow-auto scrollbar-default transition-all duration-300 ease-in-out ${
-                  sidebarOpen ? "right-0" : "-right-96"
+                  sidebarOpen ? "right-0" : "-right-[60%]"
                 }`}
               >
                 <div className="flex flex-col rounded-t-lg w-full h-full gap-4">
