@@ -27,7 +27,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 py-8 transition-colors duration-300 ease-in-out z-50 bg-brandBlue">
+    <div className="fixed top-0 left-0 right-0 py-8 transition-colors duration-300 ease-in-out z-50">
       <div className="m-auto max-w-7xl px-8">
         <div className="flex items-center w-full justify-center md:justify-between">
           <div className="flex items-center gap-4">
@@ -42,25 +42,21 @@ export const Header = () => {
                 Cyril.
               </a>
             </div>
-            <nav className="hidden md:flex gap-3 font-marlin-medium text-brandOffwhite tracking-wide text-sm">
+            <nav className="hidden md:flex gap-3 font-marlin-medium text-brandOffwhite tracking-normal text-sm">
               <NavigationButton text="Projets" href="/" />
               <NavigationButton text="A propos" href="/about" />
               <NavigationButton text="Contact" href="/contact" />
             </nav>
           </div>
-          <a href="https://github.com/Cyril-vtn" className=" hidden md:block" target="_blank">
+          <a
+            href="https://github.com/Cyril-vtn"
+            className=" hidden md:block"
+            target="_blank"
+          >
             <Button text="Github" icon={<FaGithub size={18} />} />
           </a>
         </div>
       </div>
-      <div
-        className={`transition-opacity absolute bottom-0 top-[90px] w-full h-full duration-300 ease-in-out`}
-        style={{
-          backgroundImage: `url('/header-pattern.svg')`,
-          backgroundSize: "contain",
-          backgroundRepeat: "repeat-x",
-        }}
-      ></div>
     </div>
   );
 };
