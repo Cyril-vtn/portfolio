@@ -15,9 +15,9 @@ export const NavigationButton = ({
   return (
     <Link
       href={href}
-      className={`py-2 px-[15px] rounded-lg transition duration-300 ease-in-out cursor-pointer ${
+      className={`py-2 px-[15px] rounded-lg transition duration-150 ease-in-out cursor-pointer ${
         pathname === href
-          ? "bg-brandOffwhite text-brandBlue"
+          ? "bg-brandDeepBlue bg-opacity-50"
           : "hover:text-brandOffwhite hover:shadow-soft hover:scale-105 hover:bg-opacity-50 hover:bg-brandDeepBlue "
       }`}
     >
