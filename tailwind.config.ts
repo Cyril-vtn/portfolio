@@ -18,14 +18,14 @@ const config: Config = {
       letterSpacing: {
         tighter: "-0.05em", // Exemple de valeur négative
         tight: "-0.025em",
-        normal: "0em", // Valeur par défaut, peut être omise
+        normal: "-0.01em;", // Valeur par défaut, peut être omise
         wide: "0.025em",
         wider: "0.05em",
         widest: "0.1em",
       },
       boxShadow: {
         soft: 'rgba(0, 0, 0, 0.2) 0px 7px 15px',
-        hard: "box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;"
+        hard: 'rgba(0, 0, 0, 0.2) 0px 10px 20px',
       },
       colors: {
         primary1: "rgb(255, 234, 231)",
@@ -52,6 +52,7 @@ const config: Config = {
         secondary10: "rgb(0, 17, 12)",
         secondary11: "rgb(0, 4, 2)",
         secondary12: "rgb(0, 2, 1)",
+        lightGray: "#696969",
         lowContrast: "#FFF",
         highContrast: "#000",
         brandGreen: "#22c55e",
