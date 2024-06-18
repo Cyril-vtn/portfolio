@@ -83,7 +83,7 @@ export const ScrollSection = () => {
       <div className="w-screen flex justify-center items-center">
         <div
           ref={contentRef}
-          className="flex select-none flex-col items-center w-auto 2xl:h-[70%] xl:h-[65%] md:h-[35%] max-[768px]:h-[20%] min-[0px]:h-[15%] bg-lowContrast rounded-2xl relative aspect-video shadow-soft"
+          className="flex select-none flex-col items-center w-auto 2xl:h-[70%] xl:h-[60%] md:h-[40%] max-[768px]:h-[20%] min-[0px]:h-[15%] bg-lowContrast rounded-2xl relative aspect-video shadow-soft"
           tabIndex={0}
         >
           <div className="flex justify-center items-center h-full w-full">
@@ -136,7 +136,7 @@ export const ScrollSection = () => {
                 <div className="flex flex-col rounded-t-lg w-full h-full gap-4">
                   <div className="flex flex-col  items-center gap-2">
                     <div className="flex gap-2 justify-between w-full">
-                      <h3 className="font-marlin-medium text-brandBlue text-md tracking-normal">
+                      <h3 className="font-marlin-medium text-brandBlue tracking-normal text-[clamp(0.5rem,1vw,1rem)]">
                         Fonctionnalités
                       </h3>
                       <FaArrowRight
