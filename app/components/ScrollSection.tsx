@@ -59,7 +59,6 @@ export const ScrollSection = () => {
       videoContainer.addEventListener("mouseenter", handleMouseEnter);
       videoContainer.addEventListener("mouseleave", handleMouseLeave);
 
-      // Nettoyage
       return () => {
         videoContainer.removeEventListener("mouseenter", handleMouseEnter);
         videoContainer.removeEventListener("mouseleave", handleMouseLeave);
@@ -75,7 +74,6 @@ export const ScrollSection = () => {
       };
 
       document.addEventListener("click", handleClickOutside);
-      console.log("sidebarOpen", sidebarOpen);
       return () => {
         document.removeEventListener("click", handleClickOutside);
       };
@@ -85,7 +83,7 @@ export const ScrollSection = () => {
       <div className="w-screen flex justify-center items-center">
         <div
           ref={contentRef}
-          className="flex select-none flex-col items-center w-auto 2xl:h-[60%] xl:h-[50%] md:h-[35%] max-[768px]:h-[20%] min-[0px]:h-[15%] bg-lowContrast rounded-2xl relative aspect-video shadow-soft"
+          className="flex select-none flex-col items-center w-auto 2xl:h-[70%] xl:h-[65%] md:h-[35%] max-[768px]:h-[20%] min-[0px]:h-[15%] bg-lowContrast rounded-2xl relative aspect-video shadow-soft"
           tabIndex={0}
         >
           <div className="flex justify-center items-center h-full w-full">
@@ -94,7 +92,7 @@ export const ScrollSection = () => {
               className=" overflow-hidden relative w-full h-full flex flex-col justify-center items-center p-2 rounded-2xl"
             >
               <div
-                className={`absolute font-marlin-medium  text-brandBlue tracking-normal text-sm m-4 top-0 left-0 py-2 px-3 select-none z-50 bg-brandOffwhite rounded-lg transition-all duration-300 ease-in-out shadow-hard`}
+                className={`absolute font-marlin-medium text-brandBlue tracking-normal text-sm m-4 top-0 left-0 py-2 px-3 select-none z-50 bg-brandOffwhite rounded-lg transition-all duration-300 ease-in-out shadow-hard`}
               >
                 Sawatdee Learn Thaï
               </div>
@@ -131,7 +129,7 @@ export const ScrollSection = () => {
               <div
                 id="sidebar"
                 ref={sidebarRef}
-                className={`absolute z-50 m-4 top-0 flex flex-col h-auto w-1/4 gap-4 bg-brandOffwhite bg-noise-bg rounded-lg shadow-hard py-3 px-5 overflow-auto scrollbar-default transition-all duration-300 ease-in-out ${
+                className={`absolute z-50 m-4 top-0 flex flex-col max-h-[500px] overflow-auto h-[-webkit-fill-available] w-1/4 gap-4 bg-brandOffwhite bg-noise-bg rounded-lg shadow-hard py-3 px-5 scrollbar-default transition-all duration-300 ease-in-out ${
                   sidebarOpen ? "right-0" : "-right-[60%]"
                 }`}
               >
