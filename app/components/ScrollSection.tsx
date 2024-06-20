@@ -96,7 +96,7 @@ export const ScrollSection = () => {
               >
                 Sawatdee Learn Thaï
               </div>
-              <a href="#">
+              {width > 900 && (
                 <button
                   className={`absolute flex justify-center text-brandBlue items-center gap-1 font-marlin-medium text-sm m-4 hover:scale-105 right-0 p-2 z-50 bg-brandOffwhite rounded-lg transition-all duration-300 ease-in-out shadow-hard ${
                     isHover && !sidebarOpen ? "top-0" : "-top-20"
@@ -106,7 +106,7 @@ export const ScrollSection = () => {
                 >
                   <TbCircleArrowUpLeft size={18} /> Plus d&apos;infos
                 </button>
-              </a>
+              )}
               <button
                 className={`absolute flex justify-center text-brandBlue items-center gap-1 font-marlin-medium text-sm m-4 hover:scale-110 left-0 p-2 z-50 bg-brandOffwhite rounded-lg transition-all duration-300 ease-in-out shadow-hard hover:bg-brandBlue hover:text-brandOffwhite ${
                   isHover ? "bottom-0" : "-bottom-20"
