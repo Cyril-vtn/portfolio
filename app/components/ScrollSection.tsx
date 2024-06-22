@@ -25,6 +25,10 @@ export const ScrollSection = () => {
   }, []);
 
   useEffect(() => {
+    let scrollWidth = 0;
+    if (sectionref.current) {
+      scrollWidth = sectionref.current.scrollWidth - document.documentElement.clientWidth;
+    }
     const pin = gsap.fromTo(
       sectionref.current,
       {
@@ -37,7 +41,7 @@ export const ScrollSection = () => {
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
-          end: "7200 top",
+          end: `+=${scrollWidth} top`,
           scrub: 1.5,
           pin: true,
           onUpdate: updateProgressBar,
