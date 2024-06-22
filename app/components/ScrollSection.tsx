@@ -7,12 +7,14 @@ export const ScrollSection = () => {
   const sectionref = useRef(null);
   const triggerRef = useRef(null);
   const progressBarRef = useRef(null);
+  const [showMessage, setShowMessage] = useState(false);
 
   gsap.registerPlugin(ScrollTrigger);
 
   const updateProgressBar = useCallback(() => {
     if (!sectionref.current) return;
-    const scrollWidth = sectionref.current.scrollWidth - document.documentElement.clientWidth;
+    const scrollWidth =
+      sectionref.current.scrollWidth - document.documentElement.clientWidth;
     const scrollPosition = window.scrollY;
     const progress = (scrollPosition / scrollWidth) * 100;
     gsap.to(progressBarRef.current, {
@@ -52,6 +54,25 @@ export const ScrollSection = () => {
     };
   }, [updateProgressBar]);
 
+  useEffect(() => {
+    // show message after 2 seconds il user hasn't scrolled
+    const timeout = setTimeout(() => {
+      setShowMessage(true);
+    }, 2000);
+
+    // hide message when user scrolls
+    const handleScroll = () => {
+      setShowMessage(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section className="overflow-hidden">
       <div ref={triggerRef}>
@@ -74,6 +95,13 @@ export const ScrollSection = () => {
         id="progress-bar"
         className="fixed bottom-0 left-0 h-1 bg-brandOffwhite"
       />
+      <div
+        className={`fixed bottom-16 left-0 w-full h-12 flex justify-center items-center text-brandOffwhite font-marlin-medium text-lg animate-pulse-custom ${
+          showMessage ? "opacity-70" : "opacity-0"
+        } select-none transition-opacity duration-300 ease-in-out`}
+      >
+        Commencer à naviguer
+      </div>
     </section>
   );
 };

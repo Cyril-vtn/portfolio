@@ -3,29 +3,43 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Marlin';
+  font-family: "Marlin";
   src: url(../public/font/MarlinSoftBasic-Regular.otf);
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Marlin-Medium';
+  font-family: "Marlin-Medium";
   src: url(../public/font/MarlinSoftSQ-Medium.woff2);
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Marlin-Bold';
+  font-family: "Marlin-Bold";
   src: url(../public/font/MarlinSoftSQ-xtraBold.woff2);
   font-weight: 700;
   font-style: normal;
 }
 
-
 body {
-  font-family: 'Marlin', sans-serif;
+  font-family: "Marlin", sans-serif;
   height: 100vh;
   margin: 0;
+}
+
+@keyframes pulseEffect {
+  0%,
+  100% {
+    transform: scale(0.90);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+/* Utility class pour Tailwind */
+.animate-pulse-custom {
+  animation: pulseEffect 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
