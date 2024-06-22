@@ -14,7 +14,7 @@ export const Sidebar = ({
     <div
       id="sidebar"
       ref={sidebarRef}
-      className={`absolute z-50 m-4 top-0 flex flex-col overflow-auto h-[-webkit-fill-available] w-[30%] gap-4 bg-brandOffwhite bg-noise-bg rounded-lg shadow-hard py-3 px-5 transition-all duration-300 ease-in-out ${
+      className={`absolute z-50 m-4 top-0 flex flex-col overflow-auto h-[-webkit-fill-available] w-[30%] max-w-[420px] gap-4 bg-brandOffwhite bg-noise-bg rounded-lg shadow-hard py-3 px-5 transition-all duration-300 ease-in-out ${
         sidebarOpen ? "right-0" : "-right-[60%]"
       }`}
     >
