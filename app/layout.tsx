@@ -17,12 +17,13 @@ export default function RootLayout({
   return (
     <html lang="fr" className="scrollbar-hide">
       <body className="scrollbar-hide">
+        <div className="bg-brandBlue bg-noise-bg fixed top-0 left-0 w-full h-full"></div>
         <LoadingScreen>
-        <SmoothScrolling>
-          <Header />
-          {children}
-          <Analytics />
-        </SmoothScrolling>
+          <SmoothScrolling>
+            <Header />
+            {children}
+            <Analytics />
+          </SmoothScrolling>
         </LoadingScreen>
       </body>
     </html>
