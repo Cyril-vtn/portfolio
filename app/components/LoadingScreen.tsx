@@ -28,7 +28,7 @@ export const LoadingScreen = ({ children }) => {
         } 
       } transition-opacity duration-500 ease-in-out`}
       >
-        <div className="absolute text-white text-5xl bottom-10 right-10 z-50 font-marlin-bold">
+        <div className="absolute text-white text-5xl md:bottom-10 right-10 z-50 font-marlin-bold bottom-14">
           {pourcentage} %
         </div>
       </div>
