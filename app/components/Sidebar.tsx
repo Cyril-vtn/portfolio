@@ -5,10 +5,14 @@ export const Sidebar = ({
   sidebarRef,
   sidebarOpen,
   setSidebarOpen,
+  features,
+  languages,
 }: {
   sidebarRef: React.MutableRefObject<any>;
   sidebarOpen: boolean;
   setSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  features: string[];
+  languages: string[];
 }) => {
   return (
     <div
@@ -33,20 +37,9 @@ export const Sidebar = ({
             </div>
           </div>
           <ul className="text-sm space-y-1 text-lightGray w-full">
-            <li>- Création d’utilisateur</li>
-            <li>- Changement de Photo de profil / nom / mot de passe</li>
-            <li>
-              - Progressions de l’utilisateur via des succès ainsi qu’une barre
-              d’xp
-            </li>
-            <li>
-              - Sauvegarde des données via Firebase (Firestore, Authentication,
-              Storage)
-            </li>
-            <li>
-              - Partage de profil via React Router et ses routes dynamiques
-            </li>
-            <li>- Responsive design (Desktop First & Tablette)</li>
+            {features?.map((feature, index) => (
+              <li key={index}>- {feature}</li>
+            ))}
           </ul>
         </div>
         <div className="flex flex-col gap-2">
@@ -54,10 +47,9 @@ export const Sidebar = ({
             Languages utilisés
           </h3>
           <ul className="text-sm space-y-1 text-lightGray">
-            <li>- React</li>
-            <li>- React Router</li>
-            <li>- Firebase</li>
-            <li>- MUI</li>
+            {languages?.map((language, index) => (
+              <li key={index}>- {language}</li>
+            ))}
           </ul>
         </div>
       </div>

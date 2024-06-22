@@ -6,14 +6,14 @@ import useWindowSize from "../hooks/useWindowSize";
 import { Sidebar } from "./Sidebar";
 import { Overlay } from "./Overlay";
 import { IconType } from "react-icons";
+import { Card } from "../api.type";
 
 interface CardComponentProps {
-  title: string;
-  description: string;
+  card: Card;
 }
 
 const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
-  ({ title, description }, ref) => {
+  ({ card }, ref) => {
     const videoRef = useRef(null);
     const videoContainerRef = useRef(null);
     const sidebarRef = useRef(null);
@@ -82,7 +82,7 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
             >
               {/* Titre */}
               <div className="absolute font-marlin-medium text-brandBlue tracking-normal text-sm m-4 top-0 left-0 py-2 px-3 select-none z-50 bg-brandOffwhite rounded-lg transition-all duration-300 ease-in-out shadow-hard">
-                Sawatdee Learn Thaï
+                {card.title}
               </div>
               {/* Boutons */}
               {width > 900 && (
@@ -96,13 +96,15 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
                   <TbCircleArrowUpLeft size={18} /> Plus d&apos;infos
                 </button>
               )}
-              {buttonIcon(BiWorld, "left-0")}
-              {buttonIcon(BsGithub, "left-11")}
+              <a href={card.live_link} target="_blank" rel="noreferrer">{buttonIcon(BiWorld, "left-0")}</a>
+              <a href={card.github_link} target="_blank" rel="noreferrer">{buttonIcon(BsGithub, "left-11")}</a>
               {/* Sidebar et Overlay */}
               <Sidebar
                 sidebarRef={sidebarRef}
                 sidebarOpen={sidebarOpen}
                 setSidebarOpen={setSidebarOpen}
+                features={card.features}
+                languages={card.languages}
               />
               <Overlay sidebarOpen={sidebarOpen} />
               {/* Vidéo */}
@@ -110,10 +112,10 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
                 ref={videoRef}
                 loop
                 muted
-                poster="/sawatdee_thai_poster.png"
+                poster={card.poster_link}
                 className="w-full h-full object-cover relative rounded-xl"
               >
-                <source src="/video/sawatdee_thai_demo.mp4" type="video/mp4" />
+                <source src={card.video_link} type="video/mp4" />
               </video>
             </div>
           </div>
