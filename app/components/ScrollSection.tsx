@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import CardComponent from "./Card";
 import { Card } from "../api.type";
+import { Button } from "./Button";
+import { FaGithub } from "react-icons/fa";
 
 export const ScrollSection = () => {
   const sectionref = useRef(null);
@@ -46,7 +48,7 @@ export const ScrollSection = () => {
         translateX: 0,
       },
       {
-        translateX: `-${(cardsData.length - 1) * 100}vw`,
+        translateX: `-${cardsData.length * 100}vw`,
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -97,11 +99,22 @@ export const ScrollSection = () => {
           ref={sectionref}
         >
           {cardsData.map((card, index) => (
-            <CardComponent
-              key={index}
-              card={card}
-            />
+            <CardComponent key={index} card={card} />
           ))}
+          <div>
+            <div className="flex flex-col items-center justify-center h-screen w-screen gap-8">
+              <h1 className=" text-3xl text-center font-marlin-bold text-brandOffwhite xl:text-8xl h-auto select-none">
+                Voir d&apos;avantage <br /> de projets
+              </h1>
+              <a
+                href="https://github.com/Cyril-vtn"
+                className=" hidden md:block"
+                target="_blank"
+              >
+                <Button text="Github" icon={<FaGithub size={18} />} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div
