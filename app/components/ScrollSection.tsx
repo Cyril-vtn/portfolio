@@ -93,28 +93,27 @@ export const ScrollSection = () => {
   return (
     <section className="overflow-hidden">
       <div ref={triggerRef}>
-        <div
-          className="flex flex-row relative h-screen overflow-auto"
-          style={{ width: "500vw" }}
-          ref={sectionref}
-        >
-          {cardsData.map((card, index) => (
-            <CardComponent key={index} card={card} />
-          ))}
-          <div>
-            <div className="flex flex-col items-center justify-center h-screen w-screen gap-8">
-              <h1 className=" text-3xl text-center font-marlin-bold text-brandOffwhite xl:text-8xl h-auto select-none">
-                Voir d&apos;avantage <br /> de projets
-              </h1>
-              <a
-                href="https://github.com/Cyril-vtn"
-                target="_blank"
-              >
-                <Button text="Github" icon={<FaGithub size={18} />} />
-              </a>
+        {cardsData.length > 0 ? (
+          <div
+            className="flex flex-row relative h-screen overflow-auto"
+            style={{ width: "500vw" }}
+            ref={sectionref}
+          >
+            {cardsData.map((card, index) => (
+              <CardComponent key={index} card={card} />
+            ))}
+            <div>
+              <div className="flex flex-col items-center justify-center h-screen w-screen gap-8">
+                <h1 className=" text-3xl text-center font-marlin-bold text-brandOffwhite xl:text-8xl h-auto select-none">
+                  Voir d&apos;avantage <br /> de projets
+                </h1>
+                <a href="https://github.com/Cyril-vtn" target="_blank">
+                  <Button text="Github" icon={<FaGithub size={18} />} />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        ) : null}
       </div>
       <div
         ref={progressBarRef}
