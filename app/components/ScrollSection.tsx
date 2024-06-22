@@ -16,8 +16,11 @@ export const ScrollSection = () => {
     const scrollPosition = window.scrollY;
     // Calculez la progression en pourcentage
     const progress = (scrollPosition / scrollWidth) * 100;
-    // Mettez à jour la largeur de la barre de progression
-    progressBarRef.current.style.width = `${progress}%`;
+    gsap.to(progressBarRef.current, {
+      width: `${progress}%`,
+      duration: 1,
+      ease: "sine.out",
+    });  
   };
 
   gsap.registerPlugin(ScrollTrigger);
