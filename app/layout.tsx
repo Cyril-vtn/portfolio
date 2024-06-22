@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "./components/Header";
 import { Analytics } from "@vercel/analytics/react";
 import SmoothScrolling from "./components/SmoothScrolling";
+import { LoadingScreen } from "./components/LoadingScreen";
 
 export const metadata: Metadata = {
   title: "Cyril votion",
@@ -16,11 +17,13 @@ export default function RootLayout({
   return (
     <html lang="fr" className="scrollbar-hide">
       <body className="scrollbar-hide">
+        <LoadingScreen>
         <SmoothScrolling>
           <Header />
           {children}
           <Analytics />
         </SmoothScrolling>
+        </LoadingScreen>
       </body>
     </html>
   );
