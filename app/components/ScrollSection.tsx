@@ -108,7 +108,6 @@ export const ScrollSection = () => {
               </h1>
               <a
                 href="https://github.com/Cyril-vtn"
-                className=" hidden md:block"
                 target="_blank"
               >
                 <Button text="Github" icon={<FaGithub size={18} />} />
