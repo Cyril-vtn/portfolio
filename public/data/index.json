@@ -2,107 +2,74 @@
   "cards": [
     {
       "title": "Sawatdee Learn Thaï",
-      "description": "Une application pour apprendre le thaï de manière interactive.",
-      "buttons": [
-        {
-          "name": "Live",
-          "icon": "BiWorld",
-          "url": "https://live.example.com"
-        },
-        {
-          "name": "GitHub",
-          "icon": "BsGithub",
-          "url": "https://github.com/example/project"
-        }
+      "live_link": "https://brilliant-croissant-799b85.netlify.app/",
+      "github_link": "https://github.com/Cyril-vtn/Sawatdee_Learn_Thai",
+      "video_link": "./sawatdee/sawatdee_thai_demo.mp4",
+      "poster_link": "./sawatdee/sawatdee_thai_poster.png",
+      "features": [
+        "Création d’utilisateur",
+        "Changement de Photo de profil / nom / mot de passe",
+        "Progressions de l’utilisateur via des succès ainsi qu’une barre d’xp",
+        "Sauvegarde des données via Firebase (Firestore, Authentication, Storage)",
+        "Partage de profil via React Router et ses routes dynamiques",
+        "Responsive design (Desktop First & Tablette)"
       ],
-      "sidebar": {
-        "features": [
-          "Création d’utilisateur",
-          "Changement de Photo de profil / nom / mot de passe",
-          "Progressions de l’utilisateur via des succès ainsi qu’une barre d’xp",
-          "Sauvegarde des données via Firebase (Firestore, Authentication, Storage)",
-          "Partage de profil via React Router et ses routes dynamiques",
-          "Responsive design (Desktop First & Tablette)"
-        ],
-        "languages": [
-          "React",
-          "React Router",
-          "Firebase",
-          "MUI"
-        ]
-      }
+      "languages": ["React", "React Router", "Firebase", "MUI"]
     },
     {
-      "title": "CodeChef Masterclass",
-      "description": "Des cours interactifs pour maîtriser l'art de la programmation.",
-      "buttons": [
-        {
-          "name": "En savoir plus",
-          "action": "openSidebar"
-        },
-        {
-          "name": "Live",
-          "icon": "BiWorld",
-          "url": "https://live.codechefmasterclass.com"
-        },
-        {
-          "name": "GitHub",
-          "icon": "BsGithub",
-          "url": "https://github.com/codechefmasterclass/project"
-        }
+      "title": "Xinxin Portfolio",
+      "live_link": "https://xinxin-qin.netlify.app",
+      "github_link": "https://github.com/Cyril-vtn/xinxin-portfolio_V1",
+      "video_link": "/xinxin/xinxin_demo.mp4",
+      "poster_link": "/xinxin/xinxin_poster.png",
+      "features": [
+        "Utisation de GSAP pour les animations",
+        "Tracker de souris",
+        "Progression de scroll via une barre de progression",
+        "Sauvegarde des données via Firebase (Firestore, Authentication, Storage)",
+        "Theme clair et sombre stocker en local storage"
       ],
-      "sidebar": {
-        "features": [
-          "Cours interactifs avec feedback instantané",
-          "Challenges de programmation hebdomadaires",
-          "Suivi de progression personnalisé",
-          "Forums de discussion pour chaque cours",
-          "Certifications pour les cours terminés",
-          "Support complet pour les débutants"
-        ],
-        "languages": [
-          "Python",
-          "JavaScript",
-          "Java",
-          "C++"
-        ]
-      }
+      "languages": ["HTML", "CSS", "Javascript", "GSAP"]
     },
     {
-      "title": "Yoga Zen Space",
-      "description": "Une plateforme pour explorer et pratiquer le yoga en ligne.",
-      "buttons": [
-        {
-          "name": "Découvrir",
-          "action": "openSidebar"
-        },
-        {
-          "name": "Live",
-          "icon": "BiWorld",
-          "url": "https://live.yogazenspace.com"
-        },
-        {
-          "name": "GitHub",
-          "icon": "BsGithub",
-          "url": "https://github.com/yogazenspace/project"
-        }
+      "title": "Amazon Clone",
+      "live_link": "https://next-amazon-stripe-8o1n.vercel.app/",
+      "github_link": "https://github.com/Cyril-vtn/Next_Amazon_clone",
+      "video_link": "/amazon/amazon_demo.mp4",
+      "poster_link": "/amazon/amazon_poster.png",
+      "features": [
+        "Connexion possible via Github et Google",
+        "Recherche de produits via une barre de recherche",
+        "Possibilité de paiement (fictif) via Stripe",
+        "Ajout de produits en favoris / panier gràce à Redux"
       ],
-      "sidebar": {
-        "features": [
-          "Séances de yoga guidées par des experts",
-          "Programmes personnalisés selon le niveau et les objectifs",
-          "Suivi de la progression et des réalisations",
-          "Communauté en ligne pour le soutien et la motivation",
-          "Ressources éducatives sur le yoga et le bien-être",
-          "Accessible sur tous les appareils"
-        ],
-        "languages": [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "React"
-        ]
-      }
+      "languages": [
+        "Next (v13)",
+        "NextAuth",
+        "Typescript",
+        "Tailwind",
+        "Redux",
+        "Stripe"
+      ]
+    },
+    {
+      "title": "Panneau d'administration",
+      "live_link": "https://funny-youtiao-d39d8a.netlify.app/",
+      "github_link": "https://github.com/Cyril-vtn/react-admin-dashboard",
+      "video_link": "/admin/admin_demo.mp4",
+      "poster_link": "/admin/admin_poster.png",
+      "features": [
+        "Theme clair et sombre",
+        "Utilisation de multiples librairies (Formik, MUI, Nivo, FullCalendar) sur les différentes pages"
+      ],
+      "languages": [
+        "React",
+        "React Router",
+        "Full Calendar",
+        "Formik",
+        "Nivo",
+        "MUI"
+      ]
     }
   ]
 }
