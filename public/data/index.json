@@ -1,0 +1,108 @@
+{
+  "cards": [
+    {
+      "title": "Sawatdee Learn Thaï",
+      "description": "Une application pour apprendre le thaï de manière interactive.",
+      "buttons": [
+        {
+          "name": "Live",
+          "icon": "BiWorld",
+          "url": "https://live.example.com"
+        },
+        {
+          "name": "GitHub",
+          "icon": "BsGithub",
+          "url": "https://github.com/example/project"
+        }
+      ],
+      "sidebar": {
+        "features": [
+          "Création d’utilisateur",
+          "Changement de Photo de profil / nom / mot de passe",
+          "Progressions de l’utilisateur via des succès ainsi qu’une barre d’xp",
+          "Sauvegarde des données via Firebase (Firestore, Authentication, Storage)",
+          "Partage de profil via React Router et ses routes dynamiques",
+          "Responsive design (Desktop First & Tablette)"
+        ],
+        "languages": [
+          "React",
+          "React Router",
+          "Firebase",
+          "MUI"
+        ]
+      }
+    },
+    {
+      "title": "CodeChef Masterclass",
+      "description": "Des cours interactifs pour maîtriser l'art de la programmation.",
+      "buttons": [
+        {
+          "name": "En savoir plus",
+          "action": "openSidebar"
+        },
+        {
+          "name": "Live",
+          "icon": "BiWorld",
+          "url": "https://live.codechefmasterclass.com"
+        },
+        {
+          "name": "GitHub",
+          "icon": "BsGithub",
+          "url": "https://github.com/codechefmasterclass/project"
+        }
+      ],
+      "sidebar": {
+        "features": [
+          "Cours interactifs avec feedback instantané",
+          "Challenges de programmation hebdomadaires",
+          "Suivi de progression personnalisé",
+          "Forums de discussion pour chaque cours",
+          "Certifications pour les cours terminés",
+          "Support complet pour les débutants"
+        ],
+        "languages": [
+          "Python",
+          "JavaScript",
+          "Java",
+          "C++"
+        ]
+      }
+    },
+    {
+      "title": "Yoga Zen Space",
+      "description": "Une plateforme pour explorer et pratiquer le yoga en ligne.",
+      "buttons": [
+        {
+          "name": "Découvrir",
+          "action": "openSidebar"
+        },
+        {
+          "name": "Live",
+          "icon": "BiWorld",
+          "url": "https://live.yogazenspace.com"
+        },
+        {
+          "name": "GitHub",
+          "icon": "BsGithub",
+          "url": "https://github.com/yogazenspace/project"
+        }
+      ],
+      "sidebar": {
+        "features": [
+          "Séances de yoga guidées par des experts",
+          "Programmes personnalisés selon le niveau et les objectifs",
+          "Suivi de la progression et des réalisations",
+          "Communauté en ligne pour le soutien et la motivation",
+          "Ressources éducatives sur le yoga et le bien-être",
+          "Accessible sur tous les appareils"
+        ],
+        "languages": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React"
+        ]
+      }
+    }
+  ]
+}

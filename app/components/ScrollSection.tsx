@@ -8,8 +8,17 @@ export const ScrollSection = () => {
   const triggerRef = useRef(null);
   const progressBarRef = useRef(null);
   const [showMessage, setShowMessage] = useState(false);
-
+  const [cardsData, setCardsData] = useState([]);
   gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    fetch("/data/index.json")
+      .then((response) => response.json())
+      .then((data) => setCardsData(data.cards))
+      .catch((error) =>
+        console.error("Erreur lors du chargement des données:", error)
+      );
+  }, []);
 
   const updateProgressBar = useCallback(() => {
     if (!sectionref.current) return;
@@ -27,7 +36,8 @@ export const ScrollSection = () => {
   useEffect(() => {
     let scrollWidth = 0;
     if (sectionref.current) {
-      scrollWidth = sectionref.current.scrollWidth - document.documentElement.clientWidth;
+      scrollWidth =
+        sectionref.current.scrollWidth - document.documentElement.clientWidth;
     }
     const pin = gsap.fromTo(
       sectionref.current,
@@ -35,14 +45,14 @@ export const ScrollSection = () => {
         translateX: 0,
       },
       {
-        translateX: "-400vw",
+        translateX: `-${(cardsData.length - 1) * 100}vw`,
         ease: "none",
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
           end: `+=${scrollWidth} top`,
-          scrub: 1.5,
+          scrub: 1,
           pin: true,
           onUpdate: updateProgressBar,
         },
@@ -56,7 +66,7 @@ export const ScrollSection = () => {
       }
       pin.kill();
     };
-  }, [updateProgressBar]);
+  }, [updateProgressBar, cardsData]);
 
   useEffect(() => {
     // show message after 2 seconds il user hasn't scrolled
@@ -85,7 +95,7 @@ export const ScrollSection = () => {
           style={{ width: "500vw" }}
           ref={sectionref}
         >
-          {Array.from({ length: 5 }, (_, index) => (
+          {cardsData.map((_, index) => (
             <CardComponent
               key={index}
               title="Card Title"
