@@ -2,13 +2,14 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import CardComponent from "./Card";
+import { Card } from "../api.type";
 
 export const ScrollSection = () => {
   const sectionref = useRef(null);
   const triggerRef = useRef(null);
   const progressBarRef = useRef(null);
   const [showMessage, setShowMessage] = useState(false);
-  const [cardsData, setCardsData] = useState([]);
+  const [cardsData, setCardsData] = useState<Card[]>([]);
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -95,11 +96,10 @@ export const ScrollSection = () => {
           style={{ width: "500vw" }}
           ref={sectionref}
         >
-          {cardsData.map((_, index) => (
+          {cardsData.map((card, index) => (
             <CardComponent
               key={index}
-              title="Card Title"
-              description="Card Description"
+              card={card}
             />
           ))}
         </div>
