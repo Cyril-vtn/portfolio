@@ -17,6 +17,7 @@ export const LoadingScreen = ({ children }) => {
         }
       });
     }, 25);
+
     return () => clearInterval(interval);
   }, []);
 
