@@ -5,13 +5,16 @@ import CardComponent from "./Card";
 import { Card } from "../api.type";
 import { Button } from "./Button";
 import { FaGithub } from "react-icons/fa";
+import useWindowSize from "../hooks/useWindowSize";
 
 export const ScrollSection = () => {
+  const { width } = useWindowSize();
   const sectionref = useRef(null);
   const triggerRef = useRef(null);
   const progressBarRef = useRef(null);
   const [showMessage, setShowMessage] = useState(false);
   const [cardsData, setCardsData] = useState<Card[]>([]);
+
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -25,8 +28,7 @@ export const ScrollSection = () => {
 
   const updateProgressBar = useCallback(() => {
     if (!sectionref.current) return;
-    const scrollWidth =
-      sectionref.current.scrollWidth - document.documentElement.clientWidth;
+    const scrollWidth = sectionref.current.scrollWidth - width;
     const scrollPosition = window.scrollY;
     const progress = (scrollPosition / scrollWidth) * 100;
     gsap.to(progressBarRef.current, {
@@ -34,7 +36,7 @@ export const ScrollSection = () => {
       duration: 0.75,
       ease: "sine.out",
     });
-  }, []);
+  }, [width]);
 
   useEffect(() => {
     let scrollWidth = 0;
