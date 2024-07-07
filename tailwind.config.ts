@@ -1,7 +1,11 @@
 import type { Config } from "tailwindcss";
 // tailwind.config.js
-const plugin = require("tailwindcss/plugin");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
+/** @type {import('tailwindcss').Config} */
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,22 +14,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-30% - 0.5rem))",
+          },
+        },
+      },
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
       fontFamily: {
         marlin: ["Marlin", "sans-serif"],
         "marlin-medium": ["Marlin-Medium", "sans-serif"],
         "marlin-bold": ["Marlin-Bold", "sans-serif"],
       },
       letterSpacing: {
-        tighter: "-0.05em", // Exemple de valeur négative
+        tighter: "-0.05em",
         tight: "-0.025em",
-        normal: "-0.01em;", // Valeur par défaut, peut être omise
+        normal: "-0.01em;",
         wide: "0.025em",
         wider: "0.05em",
         widest: "0.1em",
       },
       boxShadow: {
-        soft: 'rgba(0, 0, 0, 0.2) 0px 7px 15px',
-        hard: 'rgba(0, 0, 0, 0.2) 0px 10px 20px',
+        soft: "rgba(0, 0, 0, 0.2) 0px 7px 15px",
+        hard: "rgba(0, 0, 0, 0.2) 0px 10px 20px",
       },
       colors: {
         primary1: "rgb(255, 234, 231)",
@@ -71,8 +86,17 @@ const config: Config = {
       }),
     },
   },
-  plugins: [
-    require("tailwind-scrollbar-hide"),
-  ],
+  plugins: [require("tailwind-scrollbar-hide"), addVariablesForColors],
 };
 export default config;
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
