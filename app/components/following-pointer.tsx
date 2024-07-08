@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import { motion, AnimatePresence, useMotionValue } from "framer-motion";
 import { cn } from "../utils/cn";
+import useWindowSize from "../hooks/useWindowSize";
 
 export const FollowerPointerCard = ({
   children,
@@ -19,12 +20,13 @@ export const FollowerPointerCard = ({
   const ref = React.useRef<HTMLDivElement>(null);
   const [rect, setRect] = useState<DOMRect | null>(null);
   const [isInside, setIsInside] = useState<boolean>(false); // Add this line
+  const { width } = useWindowSize();
 
   useEffect(() => {
     if (ref.current) {
       setRect(ref.current.getBoundingClientRect());
     }
-  }, []);
+  }, [width]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (rect) {
@@ -69,15 +71,7 @@ export const FollowPointer = ({
   y: any;
   title?: string | React.ReactNode;
 }) => {
-  const colors = [
-    // "var(--sky-500)",
-    // "var(--neutral-500)",
-    // "var(--teal-500)",
-    // "var(--green-500)",
-    "brandBlue",
-    // "var(--red-500)",
-    // "var(--yellow-500)",
-  ];
+  const colors = ["brandBlue"];
   return (
     <motion.div
       className="h-4 w-4 rounded-full absolute z-50"
@@ -104,7 +98,7 @@ export const FollowPointer = ({
         fill="currentColor"
         strokeWidth="1"
         viewBox="0 0 16 16"
-        className="h-6 w-6 text-brandBlue transform -rotate-[70deg] -translate-x-[12px] -translate-y-[10px]  stroke-brandOffwhite"
+        className="h-6 w-6 text-brandBlue transform -rotate-[70deg] -translate-x-[12px] -translate-y-[10px]"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +119,7 @@ export const FollowPointer = ({
             scale: 0.5,
             opacity: 0,
           }}
-          className={`px-2 py-2  text-white whitespace-nowrap min-w-max text-md rounded-full  bg-${
+          className={`px-2 py-2  text-white whitespace-nowrap min-w-max text-md rounded-full bg-${
             colors[Math.floor(Math.random() * colors.length)]
           }`}
         >
