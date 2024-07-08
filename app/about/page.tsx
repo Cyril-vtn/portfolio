@@ -39,7 +39,7 @@ export default function About() {
       <section className="h-screen w-full flex flex-col gap-16 justify-center items-center font-marlin pb-[10%]  text-brandOffwhite pt-[100px] relative leading-none tracking-wide">
         <div className="relative z-10 w-full h-[100px] sm:h-[200px] md:h-[300px] flex justify-center items-center">
           <InfiniteMovingIcons
-            speed="fast"
+            speed="normal"
             icons={[
               <FaReact key="react" />,
               <FaCss3Alt key="css" />,
