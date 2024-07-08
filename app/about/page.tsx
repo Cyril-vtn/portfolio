@@ -8,15 +8,13 @@ import { RiNextjsFill, RiTailwindCssLine } from "react-icons/ri";
 import { SiNestjs, SiTypescript } from "react-icons/si";
 import { InfiniteMovingIcons } from "../components/infinite-moving-icons";
 import { DiJavascript, DiMongodb, DiPostgresql } from "react-icons/di";
-import { FiFigma } from "react-icons/fi";
+import { FiFigma, FiMail } from "react-icons/fi";
 import { PiFramerLogo } from "react-icons/pi";
-import {
-  FollowerPointerCard,
-  FollowPointer,
-} from "../components/following-pointer";
+import { FollowerPointerCard } from "../components/following-pointer";
+import { Button } from "../components/Button";
+import { BsLinkedin } from "react-icons/bs";
 
 export default function About() {
-  // ajuster la width et la height de l'image en fonction de la taille de l'écran
   const [imageWidth, setImageWidth] = useState(200);
   const [imageHeight, setImageHeight] = useState(200);
   const { width } = useWindowSize();
@@ -68,14 +66,30 @@ export default function About() {
           </div>
         </div>
         <p className="text-center text-xl text-brandOffwhite xl:text-3xl z-10 max-w-7xl px-9 tracking-wider">
-          Développeur Full Stack (orienté Front-End) passionné par les nouveaux
-          techniques et les défis techniques. J&apos;aime apprendre et partager
-          mes connaissances. Toujours des idées plein la tête, je suis un
-          créatif curieux et enthousiaste. Toujours à la recherche de nouveaux
-          projets intéressants et de nouvelles opportunités. N&apos;hésitez pas
-          à me contacter si vous avez un projet ou une idée à partager. Je
-          serais ravi de vous aider à les concrétiser !
+          Développeur Full Stack (orienté Front-End) passionné par les nouvelles
+          technologies et les défis techniques. J&apos;aime apprendre et
+          partager mes connaissances. Toujours des idées plein la tête, je suis
+          un créatif curieux et enthousiaste. Toujours à la recherche de
+          nouveaux projets intéressants et de nouvelles opportunités.
+          N&apos;hésitez pas à me contacter si vous avez un projet ou une idée à
+          partager. Je serais ravi de vous aider à les concrétiser !
         </p>
+        <div className="flex gap-4 z-10">
+          <a
+            href="mailto:votion.cyril@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button text="Email" icon={<FiMail size={18} />} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/cyrilvotion/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button text="Linkedin" icon={<BsLinkedin size={18} />} />
+          </a>
+        </div>
       </section>
     </main>
   );
