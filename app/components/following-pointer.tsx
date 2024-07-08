@@ -10,16 +10,18 @@ export const FollowerPointerCard = ({
   children,
   className,
   title,
+  style = "blue",
 }: {
   children: React.ReactNode;
   className?: string;
   title?: string | React.ReactNode;
+  style?: "white" | "blue";
 }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const ref = React.useRef<HTMLDivElement>(null);
   const [rect, setRect] = useState<DOMRect | null>(null);
-  const [isInside, setIsInside] = useState<boolean>(false); // Add this line
+  const [isInside, setIsInside] = useState<boolean>(false);
   const { width } = useWindowSize();
 
   useEffect(() => {
@@ -55,7 +57,7 @@ export const FollowerPointerCard = ({
       className={cn("relative", className)}
     >
       <AnimatePresence>
-        {isInside && <FollowPointer x={x} y={y} title={title} />}
+        {isInside && <FollowPointer x={x} y={y} title={title} style={style} />}
       </AnimatePresence>
       {children}
     </div>
@@ -66,12 +68,14 @@ export const FollowPointer = ({
   x,
   y,
   title,
+  style,
 }: {
   x: any;
   y: any;
   title?: string | React.ReactNode;
+  style?: "white" | "blue";
 }) => {
-  const colors = ["brandBlue"];
+  const colors = [style === "blue" ? "brandBlue" : "brandOffwhite"];
   return (
     <motion.div
       className="h-4 w-4 rounded-full absolute z-50"
@@ -119,7 +123,9 @@ export const FollowPointer = ({
             scale: 0.5,
             opacity: 0,
           }}
-          className={`px-2 py-2  text-white whitespace-nowrap min-w-max text-md rounded-full bg-${
+          className={`px-3 py-2 ${
+            style === "blue" ? "text-white" : "text-brandBlue"
+          }   whitespace-nowrap min-w-max text-md rounded-full bg-${
             colors[Math.floor(Math.random() * colors.length)]
           }`}
         >
