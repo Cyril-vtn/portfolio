@@ -36,8 +36,8 @@ export default function About() {
 
   return (
     <main className="overflow-hidden w-full h-full">
-      <section className="h-screen w-full flex flex-col gap-8 justify-center items-center font-marlin text-brandOffwhite pt-[100px] relative leading-none tracking-wide">
-        <div className="relative z-10 w-full h-[300px] flex justify-center items-center">
+      <section className="h-screen w-full flex flex-col gap-16 justify-center items-center font-marlin pb-[10%]  text-brandOffwhite pt-[100px] relative leading-none tracking-wide">
+        <div className="relative z-10 w-full h-[100px] sm:h-[200px] md:h-[300px] flex justify-center items-center">
           <InfiniteMovingIcons
             speed="fast"
             icons={[
@@ -52,7 +52,7 @@ export default function About() {
               <PiFramerLogo key="framer" />,
             ]}
           />
-          <div className="absolute z-20 w-[200px] h-[200px] md:w-[300px] md:h-[300px]">
+          <div className="absolute z-20 w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px]">
             <FollowerPointerCard title="Eh oui, c'est moi ! 😎">
               <Image
                 src="/portrait.jpg"
@@ -65,7 +65,7 @@ export default function About() {
             </FollowerPointerCard>
           </div>
         </div>{" "}
-        <p className="text-center text-xl text-brandOffwhite xl:text-3xl z-10 max-w-7xl ">
+        <p className="text-center text-xl text-brandOffwhite xl:text-3xl z-10 max-w-7xl px-9 ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
           vehicula, nulla nec vehicula ultricies, urna ex dictum lacus, in
           vestibulum felis nunc et justo. Nam sed tincidunt neque. Integer vitae
