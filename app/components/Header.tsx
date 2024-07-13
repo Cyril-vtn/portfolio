@@ -45,7 +45,7 @@ export const Header = () => {
             <nav className="hidden md:flex gap-3 font-marlin-medium text-brandOffwhite tracking-normal text-sm">
               <NavigationButton text="Projets" href="/" />
               <NavigationButton text="A propos" href="/about" />
-              <NavigationButton text="Contact" href="/contact" />
+              <NavigationButton text="CV" href="/resume" />
             </nav>
           </div>
           <a

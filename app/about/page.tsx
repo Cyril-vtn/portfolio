@@ -20,7 +20,7 @@ export default function About() {
   const { width } = useWindowSize();
 
   useEffect(() => {
-    if (width > 768) {
+    if (width >= 768) {
       setImageWidth(300);
       setImageHeight(300);
     } else if (width > 500) {
@@ -33,8 +33,8 @@ export default function About() {
   }, [width]);
 
   return (
-    <main className="overflow-hidden w-full h-full">
-      <section className="h-screen w-full flex flex-col gap-16 justify-center items-center font-marlin pb-[10%]  text-brandOffwhite pt-[100px] relative leading-none tracking-wide">
+    <main className="w-screen h-screen overflow-x-hidden overflow-y-auto">
+      <section className="h-full w-full flex flex-col gap-16 justify-center items-center font-marlin text-brandOffwhite my-[100px] md:my-0 relative leading-none tracking-wide">
         <div className="relative z-10 w-full h-[100px] sm:h-[200px] md:h-[300px] flex justify-center items-center">
           <InfiniteMovingIcons
             speed="normal"
