@@ -6,6 +6,27 @@ import { LoadingScreen } from "./components/LoadingScreen";
 
 export const metadata: Metadata = {
   title: "Cyril votion",
+  description: "Cyril votion's personal website",
+  authors: [{ name: "Cyril Votion", url: "" }],
+  keywords: [
+    "Cyril Votion",
+    "portfolio",
+    "web developer",
+    "software engineer",
+    "fullstack developer",
+    "frontend developer",
+    "backend developer",
+    "javascript",
+    "typescript",
+    "react",
+    "nextjs",
+    "nestjs",
+    "tailwindcss",
+    "mongodb",
+    "postgresql",
+    "figma",
+    "framer",
+  ],
 };
 
 export default function RootLayout({
