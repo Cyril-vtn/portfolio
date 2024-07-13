@@ -96,8 +96,12 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
                   <TbCircleArrowUpLeft size={18} /> Plus d&apos;infos
                 </button>
               )}
-              <a href={card.live_link} target="_blank" rel="noreferrer">{buttonIcon(BiWorld, "left-0")}</a>
-              <a href={card.github_link} target="_blank" rel="noreferrer">{buttonIcon(BsGithub, "left-11")}</a>
+              <a href={card.live_link} target="_blank" rel="noreferrer">
+                {buttonIcon(BiWorld, "left-0")}
+              </a>
+              <a href={card.github_link} target="_blank" rel="noreferrer">
+                {buttonIcon(BsGithub, "left-11")}
+              </a>
               {/* Sidebar et Overlay */}
               <Sidebar
                 sidebarRef={sidebarRef}
