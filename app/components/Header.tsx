@@ -5,6 +5,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { NavigationButton } from "./NavigationButton";
 import { FaGithub } from "react-icons/fa";
 import { Button } from "./Button";
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -13,12 +14,12 @@ export const Header = () => {
         <div className="flex items-center w-full justify-center md:justify-between">
           <div className="flex items-center gap-4">
             <div className="flex items-center">
-              <a
+              <Link
                 className=" hidden md:block text-2xl font-marlin-bold md:ml-4 text-brandOffwhite select-none hover:scale-105 cursor-pointer transition"
                 href="/"
               >
                 Cyril.
-              </a>
+              </Link>
             </div>
             <nav className="flex gap-3 font-marlin-medium text-brandOffwhite tracking-normal text-sm">
               <NavigationButton text="Projets" href="/" />
