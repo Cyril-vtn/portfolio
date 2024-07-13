@@ -75,7 +75,7 @@ export const InfiniteMovingIcons = ({
       className={cn("scroller relative z-20  bg-brandOffwhite", className)}
     >
       <div
-        className="absolute -top-[40px] md:-top-[60px] z-50 left-0 w-full h-full bg-noise-bg rotate-180"
+        className="absolute -top-[40px] md:-top-[55px] z-50 left-0 w-full h-full bg-noise-bg rotate-180"
         style={{
           backgroundImage: `url('/header-pattern.svg')`,
           backgroundSize: "contain",
@@ -85,7 +85,7 @@ export const InfiniteMovingIcons = ({
       ></div>
 
       <div
-        className="absolute -bottom-[40px] md:-bottom-[60px] z-40 left-0 w-full h-full bg-noise-bg"
+        className="absolute -bottom-[40px] md:-bottom-[55px] z-40 left-0 w-full h-full bg-noise-bg"
         style={{
           backgroundImage: `url('/header-pattern.svg')`,
           backgroundSize: "contain",
