@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function Resume() {
   return (
     <main className="overflow-hidden w-full h-full relative">
-      <section className="h-full w-full flex flex-col gap-8 pt-28 justify-center items-center px-11">
+      <section className="h-full w-full flex flex-col gap-8 py-28 justify-center items-center px-11">
         <Image
           src="/CYRIL_VOTION_RESUME_FR.png"
           className="rounded-lg"
