@@ -12,18 +12,15 @@ export const Header = () => {
       <div className="m-auto max-w-7xl px-8">
         <div className="flex items-center w-full justify-center md:justify-between">
           <div className="flex items-center gap-4">
-            <button className=" absolute right-10 md:hidden">
-              <HiMenuAlt3 z={200} size={24} className="text-brandOffwhite" />
-            </button>
             <div className="flex items-center">
               <a
-                className="text-2xl font-marlin-bold md:ml-4 text-brandOffwhite select-none hover:scale-105 cursor-pointer transition"
+                className=" hidden md:block text-2xl font-marlin-bold md:ml-4 text-brandOffwhite select-none hover:scale-105 cursor-pointer transition"
                 href="/"
               >
                 Cyril.
               </a>
             </div>
-            <nav className="hidden md:flex gap-3 font-marlin-medium text-brandOffwhite tracking-normal text-sm">
+            <nav className="flex gap-3 font-marlin-medium text-brandOffwhite tracking-normal text-sm">
               <NavigationButton text="Projets" href="/" />
               <NavigationButton text="A propos" href="/about" />
               <NavigationButton text="CV" href="/resume" />
