@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "./components/Header";
 import { Analytics } from "@vercel/analytics/react";
 import { LoadingScreen } from "./components/LoadingScreen";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Cyril votion",
@@ -42,6 +43,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Analytics />
+          <SpeedInsights />
         </LoadingScreen>
       </body>
     </html>
