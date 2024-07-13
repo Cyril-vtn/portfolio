@@ -7,25 +7,6 @@ import { FaGithub } from "react-icons/fa";
 import { Button } from "./Button";
 
 export const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const handleScroll = () => {
-    const position = window.scrollY;
-    if (position > 0) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div className="fixed top-0 left-0 right-0 py-8 transition-colors duration-300 ease-in-out z-50">
       <div className="m-auto max-w-7xl px-8">
