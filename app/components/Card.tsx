@@ -78,7 +78,7 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
           <div className="flex justify-center items-center h-full w-full">
             <div
               ref={videoContainerRef}
-              className="overflow-hidden relative w-full h-full flex flex-col justify-center items-center p-2 rounded-2xl"
+              className="overflow-hidden relative w-full h-full flex flex-col justify-center items-center p-1 rounded-2xl"
             >
               {/* Titre */}
               <div className="absolute font-marlin-medium text-brandBlue tracking-normal text-sm m-4 top-0 left-0 py-2 px-3 select-none z-50 bg-brandOffwhite rounded-lg transition-all duration-300 ease-in-out shadow-hard">
