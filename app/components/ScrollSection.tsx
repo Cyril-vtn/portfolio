@@ -124,7 +124,7 @@ export const ScrollSection = () => {
       />
       <div
         className={`fixed bottom-16 left-0 w-full h-12 flex justify-center items-center text-brandOffwhite font-marlin-medium text-lg animate-pulse-custom ${
-          showMessage ? "opacity-70" : "opacity-0"
+          showMessage ? "opacity-100" : "opacity-0"
         } select-none transition-opacity duration-300 ease-in-out`}
       >
         Commencer à naviguer
