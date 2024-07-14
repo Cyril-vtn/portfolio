@@ -41,13 +41,15 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
     }, []);
     `
     `;
-    const buttonIcon = (icon: IconType, style: string) => {
+    const buttonIcon = (icon: IconType, style: string, ariaLabel?: string) => {
       return (
         <button
           className={`absolute flex justify-center text-brandBlue items-center gap-1 font-marlin-medium text-sm m-4 hover:scale-110 p-2 z-50 bg-brandOffwhite rounded-lg transition-all duration-300 ease-in-out shadow-hard hover:bg-brandBlue hover:text-brandOffwhite ${
             isHover ? "bottom-0" : "-bottom-20"
           } ${style}`}
           tabIndex={isHover ? 0 : -1}
+          role="button"
+          aria-label={ariaLabel}
         >
           {icon({ size: 18 })}
         </button>
@@ -55,7 +57,7 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
     };
     // handle sidebar events by closing it when clicking outside ou scrolling
     useEffect(() => {
-      const handleClickOutside = (e) => {
+      const handleClickOutside = (e: MouseEvent) => {
         if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
           setSidebarOpen(false);
         }
@@ -91,15 +93,16 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
                   }`}
                   onClick={() => setSidebarOpen(true)}
                   tabIndex={isHover ? 0 : -1}
+                  role="button"
                 >
                   <TbCircleArrowUpLeft size={18} /> Plus d&apos;infos
                 </button>
               )}
               <a href={card.live_link} target="_blank" rel="noreferrer">
-                {buttonIcon(BiWorld, "left-0")}
+                {buttonIcon(BiWorld, "left-0", "Lien vers le site web live")}
               </a>
               <a href={card.github_link} target="_blank" rel="noreferrer">
-                {buttonIcon(BsGithub, "left-11")}
+                {buttonIcon(BsGithub, "left-11", "Lien vers le dépôt Github")}
               </a>
               {/* Sidebar et Overlay */}
               <Sidebar
