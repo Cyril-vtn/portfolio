@@ -114,19 +114,9 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
                 ref={imageRef}
                 src={card.poster_link}
                 alt={card.title}
-                layout="fill"
+                fill
                 className="object-cover relative rounded-[18px] p-1"
               />
-              {/* Vidéo */}
-              {/* <video
-                ref={videoRef}
-                loop
-                muted
-                poster={card.poster_link}
-                className="w-full h-full object-cover relative rounded-xl"
-              >
-                <source src={card.video_link} type="video/mp4" />
-              </video> */}
             </div>
           </div>
         </div>
