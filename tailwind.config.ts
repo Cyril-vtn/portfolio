@@ -82,7 +82,7 @@ const config: Config = {
         brandBlue: "#3139FB",
       },
       backgroundImage: (theme) => ({
-        "noise-bg": "url(../public/NoiseLight.png)",
+        "noise-bg": "url(../public/NoiseLight.webp)",
       }),
     },
   },

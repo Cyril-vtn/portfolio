@@ -4,7 +4,7 @@
       "title": "Sawatdee Learn Thaï",
       "live_link": "https://brilliant-croissant-799b85.netlify.app/",
       "github_link": "https://github.com/Cyril-vtn/Sawatdee_Learn_Thai",
-      "poster_link": "/sawatdee/sawatdee_thai_poster.png",
+      "poster_link": "/sawatdee/sawatdee_thai_poster.webp",
       "features": [
         "Création d’utilisateur",
         "Changement de Photo de profil / nom / mot de passe",
@@ -19,7 +19,7 @@
       "title": "Xinxin Portfolio",
       "live_link": "https://xinxin-qin.netlify.app",
       "github_link": "https://github.com/Cyril-vtn/xinxin-portfolio_V1",
-      "poster_link": "/xinxin/xinxin_poster.png",
+      "poster_link": "/xinxin/xinxin_poster.webp",
       "features": [
         "Utisation de GSAP pour les animations",
         "Tracker de souris",
@@ -33,7 +33,7 @@
       "title": "Amazon Clone",
       "live_link": "https://next-amazon-stripe-8o1n.vercel.app/",
       "github_link": "https://github.com/Cyril-vtn/Next_Amazon_clone",
-      "poster_link": "/amazon/amazon_poster.png",
+      "poster_link": "/amazon/amazon_poster.webp",
       "features": [
         "Connexion possible via Github et Google",
         "Recherche de produits via une barre de recherche",
@@ -53,7 +53,7 @@
       "title": "Panneau d'administration",
       "live_link": "https://funny-youtiao-d39d8a.netlify.app/",
       "github_link": "https://github.com/Cyril-vtn/react-admin-dashboard",
-      "poster_link": "/admin/admin_poster.png",
+      "poster_link": "/admin/admin_poster.webp",
       "features": [
         "Theme clair et sombre",
         "Utilisation de multiples librairies (Formik, MUI, Nivo, FullCalendar) sur les différentes pages"
