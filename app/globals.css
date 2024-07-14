@@ -7,6 +7,7 @@
   src: url(../public/font/MarlinSoftBasic-Regular.otf);
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -14,6 +15,7 @@
   src: url(../public/font/MarlinSoftSQ-Medium.woff2);
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -21,6 +23,7 @@
   src: url(../public/font/MarlinSoftSQ-xtraBold.woff2);
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
