@@ -7,6 +7,7 @@ import { Sidebar } from "./Sidebar";
 import { Overlay } from "./Overlay";
 import { IconType } from "react-icons";
 import { Card } from "../api.type";
+import Image from "next/image";
 
 interface CardComponentProps {
   card: Card;
@@ -14,8 +15,8 @@ interface CardComponentProps {
 
 const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
   ({ card }, ref) => {
-    const videoRef = useRef(null);
-    const videoContainerRef = useRef(null);
+    const imageRef = useRef(null);
+    const imageContainerRef = useRef(null);
     const sidebarRef = useRef(null);
     const [isHover, setIsHover] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -23,21 +24,19 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
 
     useEffect(() => {
       const handleMouseEnter = () => {
-        videoRef.current.play();
         setIsHover(true);
       };
       const handleMouseLeave = () => {
-        videoRef.current.pause();
         setIsHover(false);
       };
 
-      const videoContainer = videoContainerRef.current;
-      videoContainer.addEventListener("mouseenter", handleMouseEnter);
-      videoContainer.addEventListener("mouseleave", handleMouseLeave);
+      const imageContainer = imageContainerRef.current;
+      imageContainer.addEventListener("mouseenter", handleMouseEnter);
+      imageContainer.addEventListener("mouseleave", handleMouseLeave);
 
       return () => {
-        videoContainer.removeEventListener("mouseenter", handleMouseEnter);
-        videoContainer.removeEventListener("mouseleave", handleMouseLeave);
+        imageContainer.removeEventListener("mouseenter", handleMouseEnter);
+        imageContainer.removeEventListener("mouseleave", handleMouseLeave);
       };
     }, []);
     `
@@ -77,7 +76,7 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
         >
           <div className="flex justify-center items-center h-full w-full">
             <div
-              ref={videoContainerRef}
+              ref={imageContainerRef}
               className="overflow-hidden relative w-full h-full flex flex-col justify-center items-center p-1 rounded-2xl"
             >
               {/* Titre */}
@@ -111,16 +110,13 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
                 languages={card.languages}
               />
               <Overlay sidebarOpen={sidebarOpen} />
-              {/* Vidéo */}
-              <video
-                ref={videoRef}
-                loop
-                muted
-                poster={card.poster_link}
-                className="w-full h-full object-cover relative rounded-xl"
-              >
-                <source src={card.video_link} type="video/mp4" />
-              </video>
+              <Image
+                ref={imageRef}
+                src={card.poster_link}
+                alt={card.title}
+                fill
+                className="object-cover relative rounded-[18px] p-1"
+              />
             </div>
           </div>
         </div>
