@@ -115,7 +115,7 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
                 src={card.poster_link}
                 alt={card.title}
                 layout="fill"
-                className="object-cover relative rounded-[20px] p-2"
+                className="object-cover relative rounded-[18px] p-1"
               />
               {/* Vidéo */}
               {/* <video
