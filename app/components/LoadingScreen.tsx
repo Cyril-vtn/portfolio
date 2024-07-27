@@ -24,7 +24,7 @@ export const LoadingScreen = ({ children }) => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 w-screen max-h-screen h-screen flex justify-center items-center ${
+        className={`fixed top-0 left-0 w-screen h-dvh max-h-screen flex justify-center items-center ${
           loading ? "opacity-100" : "opacity-0"
         } 
       } transition-opacity duration-500 ease-in-out`}
