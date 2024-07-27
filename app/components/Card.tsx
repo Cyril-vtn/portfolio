@@ -8,6 +8,7 @@ import { Overlay } from "./Overlay";
 import { IconType } from "react-icons";
 import { Card } from "../api.type";
 import Image from "next/image";
+import { Span } from "next/dist/trace";
 
 interface CardComponentProps {
   card: Card;
@@ -87,16 +88,22 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
               </div>
               {/* Boutons */}
               {width > 900 && (
-                <button
-                  className={`absolute flex justify-center text-brandBlue items-center gap-1 font-marlin-medium text-sm m-4 hover:scale-105 right-0 p-2 z-50 bg-brandOffwhite rounded-lg transition-all duration-300 ease-in-out shadow-hard ${
+                <div
+                  className={`absolute flex justify-center text-brandBlue items-center gap-1 font-marlin-medium text-sm m-4 right-0 py-2 px-3 z-50 bg-brandOffwhite rounded-lg transition-all duration-300 ease-in-out shadow-hard ${
                     isHover && !sidebarOpen ? "top-0" : "-top-20"
                   }`}
-                  onClick={() => setSidebarOpen(true)}
-                  tabIndex={isHover ? 0 : -1}
-                  role="button"
                 >
-                  <TbCircleArrowUpLeft size={18} /> Plus d&apos;infos
-                </button>
+                  {card.languages.map((language, index) => {
+                    return (
+                      <span
+                        key={index}
+                        className="text-sm font-marlin-medium text-brandBlue bg-brandOffwhite  rounded-lg"
+                      >
+                        {index > 0 && <span>| </span>} {language}
+                      </span>
+                    );
+                  })}
+                </div>
               )}
               <a href={card.live_link} target="_blank" rel="noreferrer">
                 {buttonIcon(BiWorld, "left-0", "Lien vers le site web live")}
@@ -105,14 +112,14 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
                 {buttonIcon(BsGithub, "left-11", "Lien vers le dépôt Github")}
               </a>
               {/* Sidebar et Overlay */}
-              <Sidebar
+              {/* <Sidebar
                 sidebarRef={sidebarRef}
                 sidebarOpen={sidebarOpen}
                 setSidebarOpen={setSidebarOpen}
                 features={card.features}
                 languages={card.languages}
-              />
-              <Overlay sidebarOpen={sidebarOpen} />
+              /> */}
+              {/* <Overlay sidebarOpen={sidebarOpen} /> */}
               <Image
                 ref={imageRef}
                 src={card.poster_link}

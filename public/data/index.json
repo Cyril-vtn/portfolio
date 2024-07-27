@@ -13,7 +13,7 @@
         "Partage de profil via React Router et ses routes dynamiques",
         "Responsive design (Desktop First & Tablette)"
       ],
-      "languages": ["React", "React Router", "Firebase", "MUI"]
+      "languages": ["React", "Firebase", "MUI"]
     },
     {
       "title": "Xinxin Portfolio",
@@ -41,7 +41,7 @@
         "Ajout de produits en favoris / panier gràce à Redux"
       ],
       "languages": [
-        "Next (v13)",
+        "Next",
         "NextAuth",
         "Typescript",
         "Tailwind",
@@ -58,14 +58,7 @@
         "Theme clair et sombre",
         "Utilisation de multiples librairies (Formik, MUI, Nivo, FullCalendar) sur les différentes pages"
       ],
-      "languages": [
-        "React",
-        "React Router",
-        "Full Calendar",
-        "Formik",
-        "Nivo",
-        "MUI"
-      ]
+      "languages": ["React", "Full Calendar", "Formik", "Nivo", "MUI"]
     }
   ]
 }
