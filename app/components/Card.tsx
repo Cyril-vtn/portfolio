@@ -18,9 +18,7 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
   ({ card }, ref) => {
     const imageRef = useRef(null);
     const imageContainerRef = useRef(null);
-    const sidebarRef = useRef(null);
     const [isHover, setIsHover] = useState(false);
-    const [sidebarOpen, setSidebarOpen] = useState(false);
     const { width } = useWindowSize();
 
     useEffect(() => {
@@ -56,19 +54,6 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
         </button>
       );
     };
-    // handle sidebar events by closing it when clicking outside ou scrolling
-    useEffect(() => {
-      const handleClickOutside = (e: MouseEvent) => {
-        if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
-          setSidebarOpen(false);
-        }
-      };
-
-      document.addEventListener("click", handleClickOutside);
-      return () => {
-        document.removeEventListener("click", handleClickOutside);
-      };
-    }, [sidebarOpen]);
 
     return (
       <div className="w-screen flex justify-center items-center">
@@ -90,7 +75,7 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
               {width > 900 && (
                 <div
                   className={`absolute flex justify-center text-brandBlue items-center gap-1 font-marlin-medium text-sm m-4 right-0 py-2 px-3 z-50 bg-brandOffwhite rounded-lg transition-all duration-300 ease-in-out shadow-hard ${
-                    isHover && !sidebarOpen ? "top-0" : "-top-20"
+                    isHover ? "top-0" : "-top-20"
                   }`}
                 >
                   {card.languages.map((language, index) => {
