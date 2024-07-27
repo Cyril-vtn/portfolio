@@ -1,6 +1,26 @@
 {
   "cards": [
     {
+      "title": "ShareDocs",
+      "live_link": "https://share-docs-gamma.vercel.app/",
+      "github_link": "https://github.com/Cyril-vtn/ShareDocs",
+      "poster_link": "/shareDocs/shareDocs_poster.webp",
+      "features": [
+        "Connexion possible via Github et Google",
+        "Recherche de produits via une barre de recherche",
+        "Possibilité de paiement (fictif) via Stripe",
+        "Ajout de produits en favoris / panier gràce à Redux"
+      ],
+      "languages": [
+        "Next",
+        "Typescript",
+        "Tailwind",
+        "Clerk",
+        "LiveBlocks",
+        "Sentry"
+      ]
+    },
+    {
       "title": "Sawatdee Learn Thaï",
       "live_link": "https://brilliant-croissant-799b85.netlify.app/",
       "github_link": "https://github.com/Cyril-vtn/Sawatdee_Learn_Thai",
