@@ -98,7 +98,7 @@ export const ScrollSection = () => {
         {cardsData.length > 0 ? (
           <div
             className="flex flex-row relative h-screen overflow-auto"
-            style={{ width: "500vw" }}
+            style={{ width: "600vw" }}
             ref={sectionref}
           >
             {cardsData.map((card, index) => (
