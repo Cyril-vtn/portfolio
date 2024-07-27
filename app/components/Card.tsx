@@ -111,15 +111,6 @@ const CardComponent = forwardRef<HTMLDivElement, CardComponentProps>(
               <a href={card.github_link} target="_blank" rel="noreferrer">
                 {buttonIcon(BsGithub, "left-11", "Lien vers le dépôt Github")}
               </a>
-              {/* Sidebar et Overlay */}
-              {/* <Sidebar
-                sidebarRef={sidebarRef}
-                sidebarOpen={sidebarOpen}
-                setSidebarOpen={setSidebarOpen}
-                features={card.features}
-                languages={card.languages}
-              /> */}
-              {/* <Overlay sidebarOpen={sidebarOpen} /> */}
               <Image
                 ref={imageRef}
                 src={card.poster_link}
