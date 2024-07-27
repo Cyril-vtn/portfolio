@@ -34,7 +34,7 @@ export default function About() {
 
   return (
     <main className="w-screen h-screen overflow-x-hidden overflow-y-auto">
-      <section className="h-full w-full flex flex-col gap-16 justify-center items-center font-marlin text-brandOffwhite my-[100px] md:my-0 relative leading-none tracking-wide">
+      <section className="h-full w-full flex flex-col md:gap-16 gap-6 md:justify-center items-center font-marlin text-brandOffwhite pb-10 pt-[150px] md:my-0 relative leading-none tracking-wide">
         <div className="relative z-10 w-full h-[100px] sm:h-[200px] md:h-[300px] flex justify-center items-center">
           <InfiniteMovingIcons
             speed="normal"
