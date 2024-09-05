@@ -11,7 +11,7 @@ export default function Resume() {
     <main className="overflow-hidden w-full h-full relative">
       <section className="h-full w-full flex flex-col gap-8 py-28 justify-center items-center px-11">
         <Image
-          src="/CYRIL_VOTION_RESUME_FR.png"
+          src="/CYRIL_VOTION_RESUME_FR.svg"
           className="rounded-lg"
           alt="Cyril Votion resume"
           width={595}
